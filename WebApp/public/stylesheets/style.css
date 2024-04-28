@@ -1,0 +1,30 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: lightgray;
+}
+
+a {
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: darkred;
+  text-decoration: none;
+  font-weight: bold;
+
+}
+
+
+.menu{
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu li {
+  display: inline;
+  margin-right: 20px;
+  font-size: 20px;
+}

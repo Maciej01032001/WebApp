@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Postings</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+<ul class="menu">
+    <li><a href="/">Main Page</a></li>
+    <li><a href="/active-postings/">Postings List</a></li>
+    <li><a href="/past-postings/">Finished Postings List</a></li>
+    <li><a href="/add-posting">Add Posting</a></li>
+</ul>
+<h1>Active Postings</h1>
+<% activePostings.forEach(posting => { %>
+    <h2><%= posting.title %></h2>
+    <p> Ordinal number: <%= posting.id %></p>
+    <p> Posted on: <%= posting.start_date_hour %></p>
+    <p> Ends on: <%= posting.end_date_hour %></p>
+    <p> Posting status is: <%= posting.status %></p>
+    <a href="/postings/<%= posting.id %>">See details on <%= posting.title %></a>
+<% }); %>
+</body>
+</html>

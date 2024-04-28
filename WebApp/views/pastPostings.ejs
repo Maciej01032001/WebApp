@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Postings</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+<ul class="menu">
+    <li><a href="/">Main Page</a></li>
+    <li><a href="/active-postings/">Postings List</a></li>
+    <li><a href="/past-postings/">Finished Postings List</a></li>
+    <li><a href="/add-posting">Add Posting</a></li>
+</ul>
+<h1>Past Postings</h1>
+
+<% pastPostings.forEach(posting => { %>
+    <h2><%= posting.title %></h2>
+    <p> Ordinal number: <%= posting.id %></p>
+    <p>Posted by: <%= posting.institution_name %></p>
+    <p>Offers are no longer accepted</p>
+    <p>Posting status is: <%= posting.status %></p>
+    <a href="/offerings/<%= posting.id %>">View Offerings</a>
+<% }); %>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offerings for Posting</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+<ul class="menu">
+    <li><a href="/">Main Page</a></li>
+    <li><a href="/active-postings/">Postings List</a></li>
+    <li><a href="/past-postings/">Finished Postings List</a></li>
+    <li><a href="/add-posting">Add Posting</a></li>
+</ul>
+<h1>Offerings for Posting: <%= posting.title %></h1>
+<h2>Description: </h2>
+<p><%= posting.description %></p>
+<h2>Max value allowed for this posting: </h2>
+<p><%= posting.max_value %></p>
+<h2>Posting status is : <%= posting.status %></h2>
+<p>Posting ended on <%= posting.end_date_hour %></p>
+<h2>Available offerings ordered ASC:</h2>
+<ul>
+    <% if (offerings.length === 0) { %>
+        <p>No offerings below the maximum value that an institution can offer.</p>
+    <% } else { %>
+        <% offerings.forEach(offering => { %>
+            <li><%= offering.amount %> by <%= offering.offering_user %> made on <%= offering.offering_date_hour %></li>
+        <% }); %>
+    <% } %>
+</ul>
+</body>
+</html>

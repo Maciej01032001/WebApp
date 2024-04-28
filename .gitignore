@@ -1,0 +1,43 @@
+# Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+
+# Dependency directories
+vendor/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# Compiled binary addons (usually Node-gyp)
+build/
+
+# Environment variables
+.env
+
+# Production build directory
+dist/
+
+# Cache and SASS files
+.cache/
+.sass-cache/
+
+# Editor-specific files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+

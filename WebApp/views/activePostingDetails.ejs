@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posting Details</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+<ul class="menu">
+    <li><a href="/">Main Page</a></li>
+    <li><a href="/active-postings/">Postings List</a></li>
+    <li><a href="/past-postings/">Finished Postings List</a></li>
+    <li><a href="/add-posting">Add Posting</a></li>
+</ul>
+<h1>Posting details</h1>
+<h1>Title: <%= posting.title %></h1>
+<p>Description: <%= posting.description %></p>
+<p>Posted by: <%= posting.institution_name %></p>
+<p>Posted on: <%= posting.start_date_hour %></p>
+<p>Ends on: <%= posting.end_date_hour %></p>
+<p><a href="/add-offering/<%= posting.id %>">Make an offer</a></p>
+</body>
+</html>
